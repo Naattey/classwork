@@ -1,3 +1,8 @@
+print("Welcome")
+print("My name is Dhonmohonu")
+print("I'm trainned BOT for calculation purpose")
+
+
 userans = int (input("Your Ans: "))
 
 def corans():
