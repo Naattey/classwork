@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="">
-    <title>Document</title>
+    <title>Dhonmohonu</title>
     <style>
     body
     {
-        background-color: black;
+        background-color: rgb(39, 25, 25);
         color: aliceblue;
         align-content: center;
         left: 50%;
         padding: 100px 400px;
         text-align: center;
-
+        font-weight: 400px;
+        
+    }
+    .btn
+    {
+        color: aliceblue;
+        background-color: rgb(48, 46, 46);
+        padding: 10px 50px;
+        margin: 10px;
+        border: none;
+        font-style: italic;
 
     }
+    
     </style>
 </head>
 <body >
@@ -29,7 +40,7 @@
 
 <h1>What would you like to do?</h1>
 <div>
-    <span><button>Guess Game</button><button>Number Corrector</button></span>
+    <span><a class="btn" onclick="cornans()">Calculator</a><button class="btn" >Number Corrector</button><button class="btn">Guess Game</button></span>
 
 
 
@@ -40,20 +51,31 @@
 
 
 <script>
-print("Welcome")
-print("My name is Dhonmohonu")
-print("I'm trainned BOT for calculation purpose")
 
 
-userans = int (input("Your Ans: "))
+// // Generate a random number between 1 and 100
+// const randomNumber = Math.floor(Math.random() * 100) + 1;
 
-def corans():
-    coranswer = 10
-    userans = coranswer
+// // Prompt the user to enter a guess
+// let guess = parseInt(prompt("Guess a number between 1 and 100"));
 
-    print("Correct answer is: ", coranswer )
+// // Define a variable to keep track of the number of guesses
+// let numGuesses = 1;
 
-corans()
+// // Loop until the user guesses the correct number
+// while (guess !== randomNumber) {
+//   if (guess > randomNumber) {
+//     guess = parseInt(prompt("Too high. Guess again."));
+//   } else {
+//     guess = parseInt(prompt("Too low. Guess again."));
+//   }
+//   numGuesses++;
+// }
+
+// // Congratulate the user and display the number of guesses it took
+// alert(`Congratulations! You guessed the number ${randomNumber} in ${numGuesses} guesses.`);
+
+
 
 
 </script>
