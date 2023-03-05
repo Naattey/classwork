@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="">
-    <title>Dhonmohonu</title>
+    <title>BOT with Style</title>
     <style>
+    h1
+    {
+        font-size: 60px;
+    }
     body
     {
-        background-color: rgb(39, 25, 25);
+        background-color: rgb(54, 38, 38);
         color: aliceblue;
         align-content: center;
         left: 50%;
@@ -16,7 +20,11 @@
         font-weight: 400px;
         
     }
-    .btn
+    p
+    {
+        font-size: 25px;
+    }
+    .btnno
     {
         color: aliceblue;
         background-color: rgb(48, 46, 46);
@@ -24,59 +32,154 @@
         margin: 10px;
         border: none;
         font-style: italic;
+        background-color: brown;
+    }
+    .btn1
+    {
+        color: aliceblue;
+        padding: 10px 50px;
+        margin: 10px;
+        border: none;
+        font-style: italic;
+        background-color: rgb(38, 38, 240);
+   
+    }
+    .btn2
+    {
+        color: aliceblue;
+        padding: 10px 50px;
+        margin: 10px;
+        border: none;
+        font-style: italic;
+        background-color: brown;
+    }
+    .btn3
+    {
+        color: aliceblue;
+        padding: 10px 50px;
+        margin: 10px;
+        border: none;
+        font-style: italic;
+        background-color: darkgreen;
+    }
+    .btnyes
+    {
+        color: aliceblue;
+        padding: 10px 50px;
+        margin: 10px;
+        border: none;
+        font-style: italic;
+        background-color: darkgreen;
 
+    }
+    .btnyes:hover, .btn1:hover, .btn2:hover, .btn3:hover, .btnno:hover
+    {
+        background-color: rgb(83, 70, 54);
+    }
+
+    .navbar {
+    overflow: hidden;
+    }
+
+    .navbar a {
+    float: center;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    }
+
+    .subnav {
+    float: center;
+    overflow: hidden;
+
+    }
+
+    .subnav .subnavbtn 
+    {
+        color: aliceblue;
+        padding: 10px 50px;
+        margin: 10px;
+        border: none;
+        font-style: italic;
+        background-color: darkgreen;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    
+    /* .navbar a:hover, .subnav:hover .subnavbtn {
+    background-color: red;
+    } */
+
+    .subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    padding-top: 50px;
+    width: 100%;
+    z-index: 1;
+    }
+
+    .subnav-content a {
+    float: center;
+    color: white;
+    text-decoration: none;
+    }
+
+    .subnav-content a:hover {
+    background-color: #eee;
+    color: black;
+    }
+
+    .subnav:hover .subnav-content {
+    display: block;
+    }
+
+    .active .subnav-content
+    {
+        display: block;
     }
     
     </style>
 </head>
 <body >
-    
-    
-</body>
-<h1>Welcome</h1>
-<p>My Name is Dhonmohonu</p>
-<p>I'm trainned BOT for calculation purpose</p>
 
+    <h1>Welcome</h1>
 
-<h1>What would you like to do?</h1>
-<div>
-    <span><a class="btn" onclick="cornans()">Calculator</a><button class="btn" >Number Corrector</button><button class="btn">Guess Game</button></span>
+    <p>My Name is Dhonmohonu.</p>
 
+    <p>I'm trainned BOT for calculation & Gamming purpose.</p>
 
+    <span> 
+        <h1>Are you Ready?</h1>
+        <a class="btnyes" >Yes</a>
+        <button class="btnno" >No</button>
+    </span>
+
+<div class="playing">
+    <h1>What would you like to do?</h1>
+    <div class="navbar">
+        <div class="subnav">
+          <button class="subnavbtn">Yes</button> <a class="btnno">Noo</a>
+          <div class="subnav-content" routerLinkActive="active">
+            <a>Calculator</a>
+            <a>Number Corrector</a>
+            <a >Guess Game</a>
+          </div>
+        </div>
+
+      </div>
 
 </div>
-<br>
+</body>
 
-<input (click)="userans" placeholder="Your answer: ">
 
 
 <script>
-
-
-// // Generate a random number between 1 and 100
-// const randomNumber = Math.floor(Math.random() * 100) + 1;
-
-// // Prompt the user to enter a guess
-// let guess = parseInt(prompt("Guess a number between 1 and 100"));
-
-// // Define a variable to keep track of the number of guesses
-// let numGuesses = 1;
-
-// // Loop until the user guesses the correct number
-// while (guess !== randomNumber) {
-//   if (guess > randomNumber) {
-//     guess = parseInt(prompt("Too high. Guess again."));
-//   } else {
-//     guess = parseInt(prompt("Too low. Guess again."));
-//   }
-//   numGuesses++;
-// }
-
-// // Congratulate the user and display the number of guesses it took
-// alert(`Congratulations! You guessed the number ${randomNumber} in ${numGuesses} guesses.`);
-
-
-
+ 
 
 </script>
 </html>
