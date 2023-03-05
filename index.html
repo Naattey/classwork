@@ -7,7 +7,7 @@
     <style>
     h1
     {
-        font-size: 60px;
+        font-size: 30px;
     }
     body
     {
@@ -15,7 +15,6 @@
         color: aliceblue;
         align-content: center;
         left: 50%;
-        padding: 100px 400px;
         text-align: center;
         font-weight: 400px;
         
@@ -29,10 +28,11 @@
         color: aliceblue;
         background-color: rgb(48, 46, 46);
         padding: 10px 50px;
-        margin: 10px;
+        
         border: none;
         font-style: italic;
         background-color: brown;
+        text-decoration: none;
     }
     .btn1
     {
@@ -108,6 +108,15 @@
         align-items: center;
         align-content: center;
     }
+    .subnavbtn:hover
+    {
+        background-color: rgb(83, 70, 54);
+    }
+    :active .subnavbtn
+     {
+        background-color: rgb(83, 70, 54);
+    }
+
 
     
     /* .navbar a:hover, .subnav:hover .subnavbtn {
@@ -118,7 +127,6 @@
     display: none;
     position: absolute;
     left: 0;
-    padding-top: 50px;
     width: 100%;
     z-index: 1;
     }
@@ -136,12 +144,28 @@
 
     .subnav:hover .subnav-content {
     display: block;
+    
+
     }
 
-    .active .subnav-content
+    .subnav-content:active
     {
         display: block;
+        background-color: rgb(83, 70, 54);
     }
+    :active .subnav-content
+    {
+        display: block;
+        background-color: rgb(83, 70, 54);
+    }
+    /* .btndeco
+    {
+        text-align: center;
+        display: flex;
+        left: 50%;
+        float: center;
+
+    } */
     
     </style>
 </head>
@@ -153,21 +177,23 @@
 
     <p>I'm trainned BOT for calculation & Gamming purpose.</p>
 
-    <span> 
-        <h1>Are you Ready?</h1>
-        <a class="btnyes" >Yes</a>
-        <button class="btnno" >No</button>
-    </span>
 
 <div class="playing">
-    <h1>What would you like to do?</h1>
+    
     <div class="navbar">
+        <h1>Are you Ready?</h1>
+
+        <button class="btnno">Noo</button>
         <div class="subnav">
-          <button class="subnavbtn">Yes</button> <a class="btnno">Noo</a>
-          <div class="subnav-content" routerLinkActive="active">
-            <a>Calculator</a>
-            <a>Number Corrector</a>
-            <a >Guess Game</a>
+            
+          <button class="subnavbtn" LinkActive="active">Yes</button>
+          <div class="subnav-content" >
+            <h1>What would you like to do?</h1>
+            <a href="#">Calculator
+
+            </a>
+            <a href="#">Number Corrector</a>
+            <a href="#">Guess Game</a>
           </div>
         </div>
 
