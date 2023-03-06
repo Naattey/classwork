@@ -141,31 +141,27 @@
     background-color: #eee;
     color: black;
     }
-
-    .subnav:hover .subnav-content {
-    display: block;
-    
-
+    .hide
+    {
+        display: none;
     }
-
-    .subnav-content:active
+    .show
     {
         display: block;
+    }
+    .gameselector
+    {
+        background-color: darkgreen;
+        border: none;
+    }
+    .gameselector:hover
+    {
         background-color: rgb(83, 70, 54);
     }
-    :active .subnav-content
+    .gameselector.active
     {
-        display: block;
-        background-color: rgb(83, 70, 54);
+        background-color: rgb(199, 138, 63);
     }
-    /* .btndeco
-    {
-        text-align: center;
-        display: flex;
-        left: 50%;
-        float: center;
-
-    } */
     
     </style>
 </head>
@@ -173,39 +169,68 @@
 
     <h1>Welcome</h1>
 
-    <p>My Name is Dhonmohonu.</p>
+    <p>My Name is >> Dhonmohonu << </p>
 
-    <p>I'm trainned BOT for calculation & Gamming purpose.</p>
+    <p>I'm trainned BOT for calculation & gamming purpose.</p>
 
 
-<div class="playing">
+<div >
     
     <div class="navbar">
         <h1>Are you Ready?</h1>
 
-        <button class="btnno">Noo</button>
+        <button class="btnno" onclick="showyes(false)" >Noo</button>
         <div class="subnav">
             
-          <button class="subnavbtn" LinkActive="active">Yes</button>
-          <div class="subnav-content" >
+          <button class="subnavbtn" onclick="showyes(true)" >Yes</button>
+          <div class="subnav-content" id="subnav-content" >
             <h1>What would you like to do?</h1>
-            <a href="#">Calculator
-
-            </a>
-            <a href="#">Number Corrector</a>
-            <a href="#">Guess Game</a>
+            <button class="gameselector" id="calbtn" onclick="playgame(event)">Calculator</button>
+            <button class="gameselector" id="cortorbtn" onclick="playgame(event)">Number Corrector</button>
+            <button class="gameselector" id="gamebtn" onclick="playgame(event)"> Guess Game</button>
           </div>
         </div>
 
       </div>
 
 </div>
+
+
+<div class="calbtn">
+
+</div>
+<div class="cortorbtn">
+
+</div>
+
+<div class="gamebtn">
+
+</div>
+
+
 </body>
 
 
 
 <script>
- 
+
+ function playgame(event)
+{
+    const activeGameSelector = document.querySelectorAll(".gameselector.active");
+    activeGameSelector.forEach( item => { item.classList.remove("active")});
+    event.target.classList.add("active");
+}
+
+function showyes(shouldShow)
+{   
+    if (shouldShow) {
+        document.getElementById("subnav-content").classList.add("show");
+    }
+    else {
+        document.getElementById("subnav-content").classList.remove("show");  
+    }
+    
+}
 
 </script>
 </html>
