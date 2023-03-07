@@ -160,7 +160,7 @@
     }
     .gameselector.active
     {
-        background-color: rgb(199, 138, 63);
+        background-color: rgb(83, 70, 54);
     }
     
     </style>
@@ -196,15 +196,21 @@
 </div>
 
 
-<div class="calbtn">
-
+<div class="game" >
+    <div class="game" id="game-calbtn">
+       <h1>Try Calculator</h1>
+    </div>
 </div>
-<div class="cortorbtn">
-
+<div class="game" >
+    <div class="game" id="game-cortorbtn">
+       <h1>Number Corrector</h1>
+    </div>
 </div>
 
-<div class="gamebtn">
-
+<div class="game" >
+    <div class="game" id="gamebtn">
+       <h1>Guess Game</h1>
+    </div>
 </div>
 
 
@@ -219,6 +225,17 @@
     const activeGameSelector = document.querySelectorAll(".gameselector.active");
     activeGameSelector.forEach( item => { item.classList.remove("active")});
     event.target.classList.add("active");
+
+    //hide the active game (if any)
+    const activeGame = document.querySelectorAll(".game.show");
+    activeGame.forEach(item => { item.classList.remove("show")});
+
+    //Select the game element to active
+    const newActiveGameElement = document.getElementById(`game-${event.target.id}`);
+
+    //add 'show' class to the game html element so it becomes visible 
+    newActiveGameElement.classList.add('show');
+
 }
 
 function showyes(shouldShow)
