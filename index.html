@@ -151,7 +151,132 @@
     .game{
         display: none;
     }
+ /* //tab 1 */
 
+}
+
+body2{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(-45deg, #14EBB7, #39a3ff);
+}
+.container{
+    /* display: none !important; */
+    width: 600px;
+    height: 300px;
+    background-color: #39a3ff;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.377);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    height: 90%;
+}
+
+.box .image{
+    width: 40%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .image img{
+    width: 100%;
+}
+
+.box .text{
+    width: 60%;
+    /* height: inherit; */
+}
+
+h3{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin: 0%;
+    margin-bottom: 20px;
+}
+
+.input-box{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: 0ch;
+    border-radius: 5px;
+    font-size: 30px;
+    background-color: lightblue;
+    text-align: center;
+}
+
+.button-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button{
+    width: 200px;
+    border: 0ch;
+    height: 30px;
+    border-radius: 5px;
+    background: #ffae4c;
+    letter-spacing: 2px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+
+button:hover{
+    background: #ff160a;
+}
+
+.winContainer{
+    display: none;
+    width: 600px;
+    height: max-content;
+    background-color: #ffae4c;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.377);
+}
+
+.winContainer h3{
+    margin: 0ch;
+    padding: 20px;
+}
+
+
+
+.loseContainer{
+    display: none;
+    width: 600px;
+    height: max-content;
+    background-color: #ff160a;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.377);
+}
+
+.loseContainer h3{
+    margin: 0ch;
+    padding: 20px;
+}
     
     </style>
 </head>
@@ -200,6 +325,35 @@
 
     <div class="game" id="game-gamebtn">
        <h1>Guess Game</h1>
+       <div class="body2" class="container" id="container">
+        <section class="box">
+            <div class="image">
+                <img src="./image.png" alt="">
+            </div>
+            <div class="text">
+                <h3>Let's Guess The Number Between 1 to 10</h3>
+                <section class="input-box">
+                    <input type="text"  id="number">
+                </section>
+                <section class="button-box">
+                    <button onclick="check()">
+                        Check
+                    </button>
+                </section>
+            </div>
+        </section>
+    </div>
+    <div class="winContainer" id="winContainer">
+        <h3>
+            <span style="color: red;">Congratulation! </span>You Won .....
+        </h3>
+    </div>
+    <div class="loseContainer" id="loseContainer">
+        <h3>
+            <span style="color: rgb(255, 187, 0);">Opps! </span>Try Again .....
+        </h3>
+    </div>
+
     </div>
 </div>
 
@@ -237,6 +391,22 @@ function showyes(shouldShow)
         const activeGame = document.querySelectorAll(".game.show");
         activeGame.forEach(item => { item.classList.remove("show")});
     }
+
+    function check(){
+    var myNum = document.getElementById('number').value;
+    var intNum = parseInt(myNum);
+    console.log(intNum);
+    var randomNum = Math.floor((Math.random()*10)+1);
+    console.log(randomNum);
+    if(intNum === randomNum){
+        document.getElementById("winContainer").style.display = 'block';
+        document.getElementById("container").style.display = 'none';
+    }
+    else{
+        document.getElementById("loseContainer").style.display = 'block';
+        document.getElementById("container").style.display = 'none';
+    }
+}
 }
 </script>
 </html>
