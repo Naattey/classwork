@@ -16,8 +16,7 @@
         align-content: center;
         left: 50%;
         text-align: center;
-        font-weight: 400px;
-        
+        font-weight: 400px;  
     }
     p
     {
@@ -28,7 +27,7 @@
         color: aliceblue;
         background-color: rgb(48, 46, 46);
         padding: 10px 50px;
-        
+        border-radius: 15px;
         border: none;
         font-style: italic;
         background-color: brown;
@@ -42,7 +41,6 @@
         border: none;
         font-style: italic;
         background-color: rgb(38, 38, 240);
-   
     }
     .btn2
     {
@@ -70,32 +68,26 @@
         border: none;
         font-style: italic;
         background-color: darkgreen;
+        border-radius: 15px;
 
     }
-    .btnyes:hover, .btn1:hover, .btn2:hover, .btn3:hover, .btnno:hover
+    .btn1:hover, .btn2:hover, .btn3:hover, .btnno:hover
     {
         background-color: rgb(83, 70, 54);
     }
-
     .navbar {
-    overflow: hidden;
+        overflow: hidden;
     }
-
     .navbar a {
-    float: center;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
     }
-
     .subnav {
-    float: center;
-    overflow: hidden;
-
+        overflow: hidden;
     }
-
     .subnav .subnavbtn 
     {
         color: aliceblue;
@@ -105,54 +97,45 @@
         font-style: italic;
         background-color: darkgreen;
         text-align: center;
-        align-items: center;
-        align-content: center;
-    }
-    .subnavbtn:hover
-    {
-        background-color: rgb(83, 70, 54);
+        border-radius: 15px;
+
     }
     :active .subnavbtn
      {
         background-color: rgb(83, 70, 54);
     }
-
-
-    
-    /* .navbar a:hover, .subnav:hover .subnavbtn {
-    background-color: red;
-    } */
-
     .subnav-content {
-    display: none;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    z-index: 1;
+        display: none;
+        left: 0;
+        width: 100%;
+        z-index: 1;
     }
-
     .subnav-content a {
-    float: center;
-    color: white;
-    text-decoration: none;
+        color: white;
+        text-decoration: none;
     }
-
     .subnav-content a:hover {
-    background-color: #eee;
-    color: black;
+        background-color: #eee;
+        color: black;
     }
-    .hide
+    .hide .game
     {
         display: none;
     }
-    .show
+    .show 
     {
-        display: block;
+        display: block !important;
     }
     .gameselector
     {
         background-color: darkgreen;
         border: none;
+        border-radius: 15px;
+        height: 30px;
+        margin: 5px;
+        padding: 08px 20px 20px 20px;
+        font-weight: bold;
+        color: aliceblue;
     }
     .gameselector:hover
     {
@@ -160,8 +143,15 @@
     }
     .gameselector.active
     {
+        background-color: rgb(83, 70, 54);  
+    } 
+    .navbar a:hover, .subnav:hover .subnavbtn:hover .gameselector:hover {
         background-color: rgb(83, 70, 54);
     }
+    .game{
+        display: none;
+    }
+
     
     </style>
 </head>
@@ -196,26 +186,25 @@
 </div>
 
 
-<div class="game" >
+<div class="games" >
     <div class="game" id="game-calbtn">
        <h1>Try Calculator</h1>
     </div>
-</div>
-<div class="game" >
+
+
     <div class="game" id="game-cortorbtn">
        <h1>Number Corrector</h1>
     </div>
-</div>
 
-<div class="game" >
-    <div class="game" id="gamebtn">
+
+
+    <div class="game" id="game-gamebtn">
        <h1>Guess Game</h1>
     </div>
 </div>
 
 
 </body>
-
 
 
 <script>
@@ -232,12 +221,12 @@
 
     //Select the game element to active
     const newActiveGameElement = document.getElementById(`game-${event.target.id}`);
+    console.log(`game-${event.target.id}`);
+    
 
     //add 'show' class to the game html element so it becomes visible 
     newActiveGameElement.classList.add('show');
-
 }
-
 function showyes(shouldShow)
 {   
     if (shouldShow) {
@@ -245,9 +234,9 @@ function showyes(shouldShow)
     }
     else {
         document.getElementById("subnav-content").classList.remove("show");  
+        const activeGame = document.querySelectorAll(".game.show");
+        activeGame.forEach(item => { item.classList.remove("show")});
     }
-    
 }
-
 </script>
 </html>
