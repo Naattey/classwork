@@ -1,0 +1,90 @@
+body{
+    background-color: rgb(29, 65, 180);
+}
+
+.navlogo{
+    text-decoration: none;
+    font-size: 60px;
+    color: aquamarine;
+}
+.navbar{
+    display: flex;
+    float: right;
+}
+
+.navbar span{
+    color: aquamarine;
+    padding-top: 10px;
+    
+ 
+}
+.navbar a
+{
+    text-decoration: none;
+    color: rgb(105, 105, 163);
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+    padding: 10px;
+}
+.navbar a:hover
+{
+    background-color: blue;
+    border-radius: 10px;
+    color: aliceblue;
+}
+div img{
+    width: 1200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+/* Contact */
+.formlook{
+    
+    width: 800px;
+    height: 600px;
+    margin: auto;
+    padding: 10px;
+    background-color: rgb(40, 42, 170);
+    border-radius: 20px;
+    
+    
+}
+.formlook a{
+    display: block;
+    padding: 10px;
+    font-size: 40px;    
+}
+
+div form{
+    color: black;
+    display: center;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    justify-content: center; 
+    
+}
+
+div form a input {
+    height: 30px;
+    background-color: rgb(29, 28, 28);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.buttoncont a {
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(58, 30, 85);
+    border-radius: 20px;
+    border: solid rgb(71, 76, 122);
+    width: 100px;
+    height: 10px;
+    padding: 20px;
+    display: inline-block;
+
+}
