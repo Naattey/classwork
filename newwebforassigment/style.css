@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(29, 65, 180);
+    background-color: rgb(158, 177, 240);
 }
 
 .navlogo{
@@ -45,10 +45,10 @@ div img{
 .formlook{
     
     width: 800px;
-    height: 600px;
+    height: 800px;
     margin: auto;
     padding: 10px;
-    background-color: rgb(40, 42, 170);
+    background-color: rgb(110, 111, 180);
     border-radius: 20px;
     
     
@@ -71,7 +71,7 @@ div form{
 
 div form a input {
     height: 30px;
-    background-color: rgb(29, 28, 28);
+    background-color: rgb(172, 164, 164);
     border-radius: 20px;
     text-align: center;
 }
@@ -86,5 +86,18 @@ div form a input {
     height: 10px;
     padding: 20px;
     display: inline-block;
+}
+.contactFbtn{
+    display: flex;
+    justify-content: center;
 
+}
+.contactFbtn a{
+    padding: 8px;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+.contactFbtn a:hover {
+    background-color: rgb(172, 164, 164);
 }
