@@ -1,0 +1,19 @@
+<library>
+    <book>
+        <title> The Diploma Thesis That Dosn't Appear </title>
+        <editor> Layaan </editor>
+        <publisher> Adnan </publisher>
+
+    </book>
+    <journal>
+        <title> The Diploma Thesis That Dosn't Appear </title>
+        <volume> 24 <number>1<number></volume>
+    </journal>
+    <misc id="Dipl2002-12" id="TR2002-04">     
+        <title> The Diploma Thesis That Dosn't Appear </title>
+        <author> Naattey </author>
+        <year> 2002 </year>
+        <pages> 0 </pages>
+    </misc>
+
+</library>

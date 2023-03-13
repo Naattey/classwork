@@ -1,27 +1,23 @@
 body{
-    background-color: rgb(158, 177, 240);
+    background-color: #1D6A96;
 }
-
 .navlogo{
     text-decoration: none;
     font-size: 60px;
-    color: aquamarine;
+    color: #283B42;
 }
 .navbar{
     display: flex;
     float: right;
 }
-
 .navbar span{
     color: aquamarine;
     padding-top: 10px;
-    
- 
 }
 .navbar a
 {
     text-decoration: none;
-    color: rgb(105, 105, 163);
+    color: #283B42;
     font-size: 20px;
     margin: 10px;
     font-weight: bold;
@@ -29,7 +25,7 @@ body{
 }
 .navbar a:hover
 {
-    background-color: blue;
+    background-color: #85B8CB;
     border-radius: 10px;
     color: aliceblue;
 }
@@ -45,59 +41,44 @@ div img{
 .formlook{
     
     width: 800px;
-    height: 800px;
+    height: 600px;
     margin: auto;
     padding: 10px;
-    background-color: rgb(110, 111, 180);
+    background-color: #D1DDDB;
     border-radius: 20px;
     
-    
+   
 }
 .formlook a{
     display: block;
     padding: 10px;
     font-size: 40px;    
 }
-
 div form{
-    color: black;
-    display: center;
+    color: #283B42;
+    display: flexbox;
     padding: 10px;
     margin: 5px;
     text-align: center;
     justify-content: center; 
     
 }
-
 div form a input {
+    width: 280px;
     height: 30px;
-    background-color: rgb(172, 164, 164);
+    font-size: 20px;
+    background-color: #283B42;
     border-radius: 20px;
     text-align: center;
 }
-
 .buttoncont a {
     text-decoration: none;
     font-size: 25px;
-    color: rgb(58, 30, 85);
+    color: #283B42;
     border-radius: 20px;
     border: solid rgb(71, 76, 122);
     width: 100px;
     height: 10px;
     padding: 20px;
     display: inline-block;
-}
-.contactFbtn{
-    display: flex;
-    justify-content: center;
-
-}
-.contactFbtn a{
-    padding: 8px;
-    margin: 10px;
-    border-radius: 25px;
-}
-
-.contactFbtn a:hover {
-    background-color: rgb(172, 164, 164);
 }
