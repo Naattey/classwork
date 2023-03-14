@@ -82,10 +82,30 @@ div form a input {
     padding: 20px;
     display: inline-block;
 }
+.maintext span{
+    width: 100px;
+    justify-content: right;
+    float: right;
+    height: 300px;
+    width: 900px;
+}
+
 .maintext span a{
     display: flex;
-    font-size: 20px;
-    flex-wrap: wrap;
     
-       
+}
+iframe{
+    display: flex;
+    float: right;
+    padding-right: 80px;
+    margin: 0px;
+
+}
+
+.videoads a {
+    padding-left: 80px;
+    position: relative;
+    padding-top: 20px;
+    margin-top: 20px;
+    padding-left: 200px;
 }
