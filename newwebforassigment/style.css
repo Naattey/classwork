@@ -82,3 +82,10 @@ div form a input {
     padding: 20px;
     display: inline-block;
 }
+.maintext span a{
+    display: flex;
+    font-size: 20px;
+    flex-wrap: wrap;
+    
+       
+}
