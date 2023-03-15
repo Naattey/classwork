@@ -3,6 +3,7 @@
 <head>
     <title>Tech Focal</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mainslider.css">
 </head>
 <body >
 <div >
@@ -18,9 +19,39 @@
 
 </div>
 
-<div class="image">
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="img/21.jpg" style="width:80%">
+      
+    </div>
+    
+    <div class="mySlides fade" >
+      <div class="numbertext">2 / 3</div>
+      <a href="registration.html"><img src="img/20.jpg" style="width:80%"></a>
+      
+      
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="img/22.jpg" style="width:80%">
+      
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+
+<!-- <div class="image">
     <img src="img/main.jpg" alt="">
-</div>
+</div> -->
 <br>
 <br>
 
@@ -36,7 +67,9 @@
             
             One of the greatest marathon runners of all time was Abebe Bikila of Ethiopia, who became the first black African to win Olympic gold by winning the marathon in a world record time at the 1960 Rome Games. Four years later he became the first man in history to successfully defend the title. Joan Benoit of the US made history at the 1984 Los Angeles Games by taking the inaugural women’s marathon title.</a>
 
-        
+        <br>
+        <br>
+        <p style="font-size: 25px;" >Maldives Half Marathon will  bring together thousands of runners  across the world in ten race categories. A half marathon, 15KM, 10KM and a 5K Fun Run. In addition to this there will be a children’s festival around the beautifully planned city of Hulhumale.Join the crowd at one of the biggest sports tourism events in the Maldives.</p>
 
     
     </span>
@@ -58,7 +91,29 @@
 <img style="padding-left: 300px;" src="img/02.jpg" alt="">
 
 
-
+<footer>Hai</footer>
     
 </body>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
 </html>
