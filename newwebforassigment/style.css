@@ -94,13 +94,6 @@ div form a input {
     display: flex;
     
 }
-iframe{
-    display: flex;
-    float: right;
-    padding-right: 80px;
-    margin: 0px;
-
-}
 
 .videoads a {
     padding-left: 80px;
